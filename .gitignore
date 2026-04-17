@@ -24,3 +24,4 @@ blib/
 pm_to_blib
 cover_db/
 nytprof.out
+/.worktrees/
