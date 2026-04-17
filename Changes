@@ -2,6 +2,8 @@ Revision history for Test2-Harness2-ChildSubReaper
 
 {{$NEXT}}
 
+0.000002  2026-04-17 11:18:10-07:00 America/Los_Angeles
+
     - Add FreeBSD and DragonFlyBSD backends via
       procctl(PROC_REAP_ACQUIRE / PROC_REAP_RELEASE).
     - Add subreaper_mechanism() diagnostic function returning
