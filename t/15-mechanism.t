@@ -6,8 +6,9 @@ my $have = have_subreaper_support();
 my $mech = subreaper_mechanism();
 
 # The core invariant: the two functions must agree on whether a
-# backend compiled in.
-is(!!$have, defined($mech) ? 1 : 0,
+# backend compiled in. Normalize both sides to 0/1 so the string-eq
+# compare used by is() doesn't trip over "" vs "0".
+is($have ? 1 : 0, defined($mech) ? 1 : 0,
    'have_subreaper_support() truthiness matches defined(subreaper_mechanism())');
 
 # If a backend is present, the mechanism label must be one of the

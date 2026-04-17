@@ -14,7 +14,9 @@ my $have = have_subreaper_support();
 my $mech = subreaper_mechanism();
 
 # Invariant that must always hold, regardless of platform.
-is(!!$have, defined($mech) ? 1 : 0,
+# Normalize both sides to 0/1 so the string-eq compare used by is()
+# doesn't trip over "" (Perl's canonical false) vs "0".
+is($have ? 1 : 0, defined($mech) ? 1 : 0,
    'have_subreaper_support() and subreaper_mechanism() agree');
 
 if (my $want = $expected_mech{$^O}) {
