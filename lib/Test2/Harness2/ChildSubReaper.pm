@@ -3,7 +3,7 @@ use 5.014000;
 use strict;
 use warnings;
 
-our $VERSION = '0.000003';
+our $VERSION = '0.000004';
 
 use XSLoader;
 XSLoader::load('Test2::Harness2::ChildSubReaper', $VERSION);
