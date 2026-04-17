@@ -2,6 +2,8 @@ Revision history for Test2-Harness2-ChildSubReaper
 
 {{$NEXT}}
 
+0.000003  2026-04-17 13:29:15-07:00 America/Los_Angeles
+
     - Fix t/10-have-support.t and t/15-mechanism.t failing their
       boolean-agreement invariant on build hosts where the prctl
       (or procctl) macro is absent at compile time. Test2::V0's
