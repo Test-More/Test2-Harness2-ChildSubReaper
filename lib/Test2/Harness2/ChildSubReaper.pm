@@ -9,7 +9,7 @@ use XSLoader;
 XSLoader::load('Test2::Harness2::ChildSubReaper', $VERSION);
 
 use Exporter qw/import/;
-our @EXPORT_OK = qw/set_child_subreaper have_subreaper_support/;
+our @EXPORT_OK = qw/set_child_subreaper have_subreaper_support subreaper_mechanism/;
 
 1;
 
