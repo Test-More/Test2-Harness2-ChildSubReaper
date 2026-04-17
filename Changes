@@ -2,6 +2,17 @@ Revision history for Test2-Harness2-ChildSubReaper
 
 {{$NEXT}}
 
+    - Add FreeBSD and DragonFlyBSD backends via
+      procctl(PROC_REAP_ACQUIRE / PROC_REAP_RELEASE).
+    - Add subreaper_mechanism() diagnostic function returning
+      "prctl", "procctl", or undef.
+    - Fix brittle t/10-have-support.t that failed on Linux build
+      environments where <sys/prctl.h> lacks PR_SET_CHILD_SUBREAPER.
+    - Generalize t/20-set-success.t and t/40-subreaper-behavior.t to
+      run on any platform advertising support (not just Linux).
+    - Refactor: move platform resolution into subreaper_impl.h; the
+      XS file now has zero #ifdef noise.
+
 0.000001  2026-04-16 15:01:58-07:00 America/Los_Angeles
 
     - First release.

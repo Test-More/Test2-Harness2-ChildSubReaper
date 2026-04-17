@@ -11,7 +11,7 @@ use ExtUtils::MakeMaker;
 use Config qw/%Config/;
 
 my %WriteMakefileArgs = (
-  "ABSTRACT" => "Tiny XS wrapper around Linux's PR_SET_CHILD_SUBREAPER prctl.",
+  "ABSTRACT" => "Cross-platform wrapper to mark the current process as a child subreaper.",
   "AUTHOR" => "Chad Granum <exodist\@cpan.org>",
   "CONFIGURE_REQUIRES" => {
     "ExtUtils::MakeMaker" => 0
